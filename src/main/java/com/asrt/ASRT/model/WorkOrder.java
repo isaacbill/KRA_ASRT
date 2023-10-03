@@ -4,7 +4,8 @@ import java.util.Date;
 
 public class WorkOrder {
 	 	private String work_order_number,work_order_owner, financial_quarter, work_status, system_name, cls_id, severity_id, sta_id, source;
-	    private Date date_lodged, date_due, date_completed, date_closed;
+	    
+		private Date date_lodged, date_due, date_completed, date_closed;
 	    private int financial_year, internal_priority, staff_id, category_id, department_id, del;
 		
 	    public WorkOrder() {
