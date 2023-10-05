@@ -3,6 +3,7 @@ package com.asrt.ASRT.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,6 +34,11 @@ public class RequestController {
     public ResponseEntity<List<WorkOrder>> searchWorkOrders(@RequestParam("query") String query){
         return ResponseEntity.ok(workorderService.searchWorkOrders(query));
     }
+	 @GetMapping("/count")
+	    public ResponseEntity<Integer> countWorkOrders(@RequestParam("query") String query) {
+	        int count = workorderService.countWorkOrders(query);
+	        return new ResponseEntity<>(count, HttpStatus.OK);
+	    }
 
     @PostMapping
     public WorkOrder createWorkOrder(@RequestBody WorkOrder workorder){
