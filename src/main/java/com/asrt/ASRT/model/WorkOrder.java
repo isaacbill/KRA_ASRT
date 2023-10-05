@@ -2,13 +2,13 @@ package com.asrt.ASRT.model;
 
 import java.util.Date;
 
-import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 @Entity
 public class WorkOrder {
+	
 	@Id
-    @Column(name = "work_order_number")
 	 	private String work_order_number;
 	 	private String work_order_owner, financial_quarter, work_status, system_name, cls_id, severity_id, sta_id, source;
 	    

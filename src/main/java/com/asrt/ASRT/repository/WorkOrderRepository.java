@@ -15,11 +15,11 @@ public interface WorkOrderRepository extends JpaRepository<WorkOrder,String> {
 
 	@Query("SELECT p FROM WorkOrder p WHERE " +
             "p.sta_id LIKE CONCAT('%',:query, '%')" +
-            "Or p.department_id LIKE CONCAT('%', :query, '%')")
+            "Or p.system_name LIKE CONCAT('%', :query, '%')")
     List<WorkOrder> searchWorkOrders(String query);
  @Query(value="SELECT * FROM work_order p WHERE " +
             "p.sta_id LIKE CONCAT('%',:query, '%')" +
-            "Or p.department_id LIKE CONCAT('%', :query, '%')",nativeQuery=true)
+            "Or p.system_name LIKE CONCAT('%', :query, '%')",nativeQuery=true)
  
  List<WorkOrder> searchWorkOrdersSQL(String query);
 

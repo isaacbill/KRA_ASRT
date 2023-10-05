@@ -19,10 +19,15 @@ import com.asrt.ASRT.service.WorkOrderService;
 @RequestMapping("/api/workorders")
 public class RequestController {
 	
+	
 	 private WorkOrderService workorderService;
 
 	public RequestController(WorkOrderService workorderService) {
 		this.workorderService = workorderService;
+	}
+	@GetMapping
+	public ResponseEntity<String>sayHello(){
+		return ResponseEntity.ok("welcome to asrt");
 	}
 	@GetMapping("/search")
     public ResponseEntity<List<WorkOrder>> searchWorkOrders(@RequestParam("query") String query){
@@ -33,7 +38,5 @@ public class RequestController {
     public WorkOrder createWorkOrder(@RequestBody WorkOrder workorder){
         return workorderService.createWorkOrder(workorder);
     }
-	 
-	 
-	 
+    	 
 }
