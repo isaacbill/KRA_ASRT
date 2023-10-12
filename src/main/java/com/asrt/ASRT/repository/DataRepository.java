@@ -2,8 +2,8 @@ package com.asrt.ASRT.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.asrt.ASRT.model.Work_Order;
+import com.asrt.ASRT.model.WorkOrder;
 
-public interface DataRepository extends JpaRepository<Work_Order, String>{
+public interface DataRepository extends JpaRepository<WorkOrder, String>{
 
 }

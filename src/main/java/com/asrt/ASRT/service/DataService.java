@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
-import com.asrt.ASRT.model.Work_Order;
+import com.asrt.ASRT.model.WorkOrder;
 import com.asrt.ASRT.repository.DataRepository;
 
 @Service
@@ -17,14 +17,14 @@ public class DataService {
 	        this.dataRepository = dataRepository;
 	     }
 
-	    public List<Work_Order> fetchAll() {
+	    public List<WorkOrder> fetchAll() {
 	        return dataRepository.findAll();
 	    }
 	    public Map<String, Long> countChoices() {
-	        List<Work_Order> workOrder = dataRepository.findAll();
+	        List<WorkOrder> workOrder = dataRepository.findAll();
 
 	        Map<String, Long> counts = new HashMap<>();
-	        for (Work_Order d : workOrder) {
+	        for (WorkOrder d : workOrder) {
 	            String choice = d.getWork_status();
 	            Long count = counts.get(choice);
 	            if (count == null) {

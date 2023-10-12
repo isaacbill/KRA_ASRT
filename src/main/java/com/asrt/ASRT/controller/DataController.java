@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.asrt.ASRT.model.Work_Order;
+import com.asrt.ASRT.model.WorkOrder;
 import com.asrt.ASRT.service.DataService;
 
 @RestController
@@ -18,7 +18,7 @@ public class DataController {
 	    }
 
 	    @GetMapping("/reports")
-	    public List<Work_Order> fetchAll() {
+	    public List<WorkOrder> fetchAll() {
 	        return dataService.fetchAll();
 	    }
 	    @GetMapping("/count-choices/open")
