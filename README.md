@@ -15,7 +15,7 @@
 
 ## 📌 Overview
 
-**KRA ASRT (Automated Support Report Tool)** is designed to automate the handling and processing of support conversations (voice or text), converting them into structured, searchable reports for compliance, audit, or service review.
+**KRA ASRT (Automated Support Report Tool)** is designed to automate the handling and processing of data converting them into structured, searchable reports for compliance, audit, or service review.
 
 ---
 
@@ -31,7 +31,6 @@
 
 ## 🚀 Features
 
-- 🎙️ Upload or capture support audio
 - 📄 Auto-generate transcript and structured support reports
 - 📦 Store in relational DB with metadata
 - 📤 API endpoints for uploading, fetching, and listing reports
